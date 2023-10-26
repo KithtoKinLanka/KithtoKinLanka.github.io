@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -226,24 +226,74 @@ a.button:hover {
 }
 
 /*pillars section*/
+/*--------PillarsHome----------*/
+.respillarshome {
+    width: 100%;
+    text-align: center;
+    padding-top: 120px;
+    margin: auto;
+}
 
-.pillars {
+.row_pillar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col_pillar {
+    flex-basis: 32%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.col_pillar img {
+    width: 70%;
+    height: auto;
+}
+
+.desc {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .respillarshome {
+        padding-top: 110px;
+    }
+
+    .row_pillar {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+/*--------end PillarsHome----------*/
+
+.respillarshome {
     padding: 50px 70px;
     background-color: #f1f1f1;
     width: 100%;
     height: auto;
-    background-image: url("images\pillarBackdrop.png");
+    background-image: url('images/pillarBackdrop.png');
+    
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 500px;
+    background-position: right;
+    background-size: 600px;
     font-size: 25px;
 }
-.pillarsbkgrd{
-    background-image: url("images\pillarBackdrop.png");
+
+/*.pillarsbkgrd{
+    background-image: url("D:/Chandrani/Web design/KithtoKinLanka/images/pillarBackdrop.png");
+    background-image: url("images/pillarBackdrop.png");
+     background-image: url("D:/Chandrani/Web design/KithtoKinLanka/images/pillarBackdrop.png");
+     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 500px;
-}
+}*/
 
 .line-1 {
     height: 5px;
@@ -282,7 +332,7 @@ a.button:hover {
 
 .pillars .row_home .col img {
     width: 50%;
-}*/
+}
 /*.responsive {
     width: 15%;
     display: inline-block;
@@ -321,6 +371,7 @@ div.gallery img {
     width: 100%;
     height: auto;
 }
+
 div.desc {
     padding: 15px;
     text-align: center;
@@ -329,17 +380,19 @@ div.desc {
     color: #555;
     font-weight: 700;
 }
+
 .responsive {
     padding: 0 6px;
     float: left;
     padding-left: 70px;
     width: 20.99999%;
 }
+
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 @media only screen and (max-width: 700px) {
     .responsive {
@@ -356,7 +409,7 @@ div.desc {
     }
 }
 
-.services_home {
+*/ .services_home {
     background: #0a809a;
     color: #fff;
     padding-left: 40px;
