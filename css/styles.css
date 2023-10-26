@@ -1011,7 +1011,7 @@ h1 {
     }
 
     .community img {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
 }
