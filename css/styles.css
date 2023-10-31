@@ -1002,7 +1002,7 @@ h1 {
         display: none; 
     }*/
     .community .row_about{
-        flex-direction: c;
+        flex-direction: column-reverse;
     }
 
 }
