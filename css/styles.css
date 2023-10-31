@@ -232,6 +232,7 @@ a.button:hover {
     text-align: center;
     padding-top: 120px;
     margin: auto;
+    font-size: 15px;
 }
 
 .row_pillar {
@@ -253,7 +254,7 @@ a.button:hover {
     height: auto;
 }
 
-.desc_pillar{
+.desc {
     margin-top: 5px;
     font-size: 20px;
 }
@@ -277,8 +278,6 @@ a.button:hover {
     background-color: #f1f1f1;
     width: 100%;
     height: auto;
-    background-image: url('images/pillarBackdrop.png');
-    
     background-repeat: no-repeat;
     background-position: right;
     background-size: 600px;
@@ -366,7 +365,7 @@ a.button:hover {
     color: #555;
     margin-bottom: 10px;
     transform: translateX(175px);
-}*//*
+}*/
 div.gallery img {
     width: 100%;
     height: auto;
@@ -403,14 +402,13 @@ div.desc {
 
 @media only screen and (max-width: 500px) {
     .responsive {
-        /*width: 100%;
+        /*width: 100%;*/
         width: 49.99999%;
         margin: 4px 0;
     }
 }
 
-*/ 
-.services_home {
+*/ .services_home {
     background: #0a809a;
     color: #fff;
     padding-left: 40px;
@@ -489,6 +487,7 @@ div.desc {
 
 .contact_row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 30px 50px;
@@ -666,35 +665,15 @@ address {
     .pillars {
         height: auto;
     }
-
-    /*.responsive {
-        width: 30%;
-        display: flex;
-        flex-basis: 50%;
-        text-align: center;
-        color: #fff;
-        height: auto;
+    .contact_row{
+        flex-direction: column;
+        align-items: baseline;
     }
-
-    .gallery {
-        border-radius: 5px;
-        padding: 20px;
-        height: auto;
-        align-items: center;
-        transform: translateX(0px);
+    .contact_col{
+        padding-bottom: 15px;
     }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-    .desc_home {
-        font-size: 15px;
-        color: #555;
-    }*/
-
 }
+
 
 
 /*--------Services----------*/
@@ -918,7 +897,13 @@ h1 {
     font-weight: 700;
     color: #292f36;
 }
-
+.row_about h3 {
+    text-align: left;
+    padding: 80px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #292f36;
+}
 .col_about p {
     font-size: 20px;
 }
@@ -938,8 +923,11 @@ h1 {
 
 .community img {
     width: 100%;
-    transform: translateX(-75px);
-    padding-top: 5px;
+    transform: translateX(-25px);
+    padding-top: 0px;
+}
+.community .col_about {
+    flex: 64%;
 }
 
 .community .col_about {
@@ -979,7 +967,7 @@ h1 {
     }
 
     .col2_about .box {
-       
+        display: none;
     }
 
     .box {
@@ -1010,8 +998,11 @@ h1 {
         background-image: linear-gradient(rgb(255, 255, 255), rgb(227, 227, 227));
     }
 
-    .community img {
-        flex-direction: column;
+    /*.community img {
+        display: none; 
+    }*/
+    .community .row_about{
+        flex-direction: c;
     }
 
 }
