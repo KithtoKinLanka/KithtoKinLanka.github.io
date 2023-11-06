@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - kithtokinlanka</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/kithtokin_web.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items" style="padding-top:55px;">
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="About" asp-action="Index">ABOUT</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Services" asp-action="Index">SERVICES</a>
+                    </li>
+                    <li><a class="btn" href="Connection.html">CONNECTION REQUEST</a></li>
+                </ul>
+                <div class="logo"><a class="logo" href="index.html"><img src="images\logotransparent.png"></a></div>
+                <div class="logo2"><img src="images\Asset 2.png"></div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-0">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <section class="contact">
+            <div class="contact_row">
+                <div class="contact_col">
+                    <address>
+                        <a asp-area="" asp-controller="About" asp-action="WhoWeAre">Who we are</a> <br>
+                        <a asp-area="" asp-controller="About" asp-action="OurCommunity">Our Community</a> <br>
+                        <a href="DataPolicy.html">Data Protection Policy </a> <br>
+                    </address>
+                </div>
+                <div class="contact_col">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <!--Text messages: whatsapp number<br>-->
+                        <b>Email:</b> <br>
+                        kithtokinlanka@gmail.com<br>
+                        info@kithtokinlanka.lk
+                    </address>
+                </div>
+            </div>
+            <div class="allrt">
+                <p>All rights reserved with KithtoKinLanka (PVT) LTD, Sri Lanka (PV00278642)</p>
+            </div>
+        </section>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
