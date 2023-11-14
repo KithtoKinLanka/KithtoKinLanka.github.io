@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - kithtokinlanka</title>
+    <title>@ViewData["Title"] kithtokinlanka</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/kithtokin_web.styles.css" asp-append-version="true" /> *@
@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
           rel="stylesheet">
+    @RenderSection("Stylesheets", required:false)
 </head>
 <body>
     <header>
@@ -35,7 +36,9 @@
                     <li>
                         <a asp-area="" asp-controller="Services" asp-action="Index">SERVICES</a>
                     </li>
-                    <li><a class="btn" href="Connection.html">CONNECTION REQUEST</a></li>
+                    <li>
+                        <a class="btn" asp-area="" asp-controller="ConnectionRequest" asp-action="Index">CONNECTION REQUEST</a>
+                    </li>
                 </ul>
                 <div class="logo"><a class="logo" href="index.html"><img src="images\logotransparent.png"></a></div>
                 <div class="logo2"><img src="images\Asset 2.png"></div>

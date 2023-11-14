@@ -1,0 +1,149 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section Stylesheets {
+    <link rel="stylesheet" href="css/connection-req-styles.css?v=@DateTime.Now">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+}
+@section Scripts {
+    <script type="text/javascript" src="js/connection-request.js"></script>
+}
+
+<!-- MultiStep Form -->
+<div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mb-2" style="margin-top:130px">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2><strong>Connection Request Form</strong></h2>
+                <p>Fill all form field to go to next step</p>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar" style="margin-left:-25px">
+                                <li class="active" id="profile"><strong>Profile</strong></li>
+                                <li id="serviceinfo"><strong>Service Info. </strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Profile Information</h2>
+                                    <label>Name <span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+                                    <input type="text" id="cname " required>
+                                    <label>Email address<span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+                                    <input type="email" id="cemail" required>
+                                    <label>WhatsApp number</label>
+                                    <input type="text" id="cwhatsapp">
+                                    <label>Country of Current Residence <span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+                                    <input type="text" id="crescountry" required>
+                                    <label>City of Current Residence</label>
+                                    <input type="text" id="crescity">
+                                    <label>
+                                        Residence Type (Permanent, Citizen, Dual Citizen etc.)<span style="color: rgba(253, 6, 56, 0.86);">
+                                            *
+                                        </span>
+                                    </label>
+                                    <input type="text" id="crestype" required>
+
+                                    <label>How many years have you been abroad?</label>
+                                    <div style="margin-top:5px;">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="durationOption" id="y0_5" value="option1" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="y0_5">0-5 Years</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="durationOption" id="y5_10" value="option2" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="y5_10">5-10 Years</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="durationOption" id="y10above" value="option3" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="y10above">More than 10 Years</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="Next Step" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <label>Languages you prefer for communication with us (English, Sinhala, Tamil) <span style="color: rgba(253, 6, 56, 0.86);"> *</span> :</label>
+                                    <div style="margin-top:5px;">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="languageEng" id="languageEng" value="English" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="languageEng">English</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="languageSin" id="languageSin" value="Sinhala" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="languageSin">Sinhala</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="languageTam" id="languageTam" value="Tamil" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="languageTam">Tamil</label>
+                                        </div>
+                                    </div>
+                                    <label>Preffered method(s) of communication. <span style="color: rgba(253, 6, 56, 0.86);"> *</span> :</label>
+                                    <div style="margin-top:5px;">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="comMethodEmail" value="Email" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="languageEng">Email</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="comMethodWhatsappTxt" value="WhatsApp text" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="comMethodWhatsappTxt">WhatsApp text</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="comMethodWhatsappCall" value="WhatsApp call" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                                            <label class="form-check-label" for="comMethodWhatsappCall">WhatsApp call</label>
+                                        </div>
+                                    </div>
+                                    <label>Convenient time for calls (please select considering your local time)  <span style="color: rgba(253, 6, 56, 0.86);"> *</span>:</label>
+                                    <input type="time" id="ctime" placeholder="Sri Lankan Time" required>
+                                    <br>
+                                    <label>What do you want to get done in Sri Lanka? Please select every category applicable <span style="color: rgba(253, 6, 56, 0.86);"> *</span> :</label>
+                                    <div style="margin-top:5px;">
+                                        <input class="form-check-input" type="checkbox" id="serviceType1" value="Family connection and care" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType1">Family connection and care</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType2" value="Property maintenance" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType2">Property maintenance</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType3" value="Holiday arrangements" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType3">Holiday arrangements</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType4" value="Legal documentation" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType4">Legal documentation</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType5" value="Tasks at government departments" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType5">Tasks at government departments</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType6" value="Social work" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType6">Social work</label><br>
+                                        <input class="form-check-input" type="checkbox" id="serviceType7" value="A requirement specific to me" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                                        <label class="form-check-label" for="serviceType7">A requirement specific to me</label><br>
+                                    </div>
+                                </div>
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                <input type="button" name="save_details" class="next action-button" value="Confirm" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title text-center">Success !</h2>
+                                    <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3">
+                                            <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5>You Have Successfully Signed Up</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
