@@ -1,3 +1,7 @@
+using kithtokin_web.BusinessLogicLayer;
+using kithtokin_web.DataAccessLayer;
+using Microsoft.EntityFrameworkCore;
+
 namespace kithtokin_web
 {
     public class Program
@@ -8,6 +12,11 @@ namespace kithtokin_web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<KithtoKinDBContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IClientService, ClientService>();
 
             var app = builder.Build();
 

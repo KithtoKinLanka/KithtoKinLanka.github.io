@@ -2,7 +2,7 @@
 
 namespace kithtokin_web.Models
 {
-    public class UserInfoModel
+    public class ClientInfoModel
     {
         public string Name { get; set; }
         public string Email { get; set; }
