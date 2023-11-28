@@ -228,11 +228,18 @@ a.button:hover {
 /*pillars section*/
 /*--------PillarsHome----------*/
 .respillarshome {
+    padding: 50px 70px;
+    background-color: #f1f1f1;
     width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 600px;
+    font-size: 25px;
     text-align: center;
-    padding-top: 120px;
-    margin: auto;
-    font-size: 15px;
+}
+.respillarshome p, h3{
+    text-align: left;
 }
 
 .row_pillar {
@@ -250,49 +257,33 @@ a.button:hover {
 }
 
 .col_pillar img {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
-.desc {
+.desc_pillar{
     margin-top: 5px;
     font-size: 20px;
 }
 
-
 @media (max-width: 768px) {
     .respillarshome {
-        padding-top: 110px;
+        padding-top: 60px;
     }
 
     .row_pillar {
         flex-direction: column;
         margin-top: 0;
     }
+    .desc_pillar{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    .col_pillar img {
+        width: 50%;
+        height: auto;
+    }
 }
-
-/*--------end PillarsHome----------*/
-
-.respillarshome {
-    padding: 50px 70px;
-    background-color: #f1f1f1;
-    width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 600px;
-    font-size: 25px;
-}
-
-/*.pillarsbkgrd{
-    background-image: url("D:/Chandrani/Web design/KithtoKinLanka/images/pillarBackdrop.png");
-    background-image: url("images/pillarBackdrop.png");
-     background-image: url("D:/Chandrani/Web design/KithtoKinLanka/images/pillarBackdrop.png");
-     background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 500px;
-}*/
 
 .line-1 {
     height: 5px;
@@ -317,98 +308,11 @@ a.button:hover {
             transparent 3px);
 }
 
-/*.pillars .row_home {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-}
+/*--------end PillarsHome----------*/
 
-.pillars .row_home .col {
-    position: relative;
-    overflow: hidden;
-}
+/*--------Services home page----------*/
 
-.pillars .row_home .col img {
-    width: 50%;
-}
-/*.responsive {
-    width: 15%;
-    display: inline-block;
-    vertical-align: top;
-    white-space: normal;
-    margin: 10px;
-    text-align: center;
-    color: #fff;
-}
-
-.gallery {
-    background-color: #04333d;
-    border-radius: 5px;
-    padding: 20px;
-    height: auto;
-    transform: translateX(175px);
-}
-
-.gallery img {
-    width: 60%;
-    height: auto;
-}
-
-.desc_home{
-    font-size: 19px;
-    color: white;
-    margin-bottom: 20px;
-}
-.descline_home{
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 10px;
-    transform: translateX(175px);
-}*/
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-    font-size: 15px;
-    background-color: transparent;
-    color: #555;
-    font-weight: 700;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    padding-left: 70px;
-    width: 20.99999%;
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        /*width: 100%;*/
-        width: 49.99999%;
-        margin: 4px 0;
-    }
-}
-
-*/ .services_home {
+.services_home {
     background: #0a809a;
     color: #fff;
     padding-left: 40px;
@@ -453,24 +357,11 @@ div.desc {
 }
 
 .col-1 img {
+    padding-top: 10px;
+    padding-left: 75px;
     width: 85%;
 }
 
-/*.col-1 .slist .btn {
-    background-color: transparent;
-    border: solid#fff;
-    border-radius: 50px;
-    border-width: 2px;
-    padding: 3px 8px;
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.col-1 .slist .btn:hover {
-    background-color: #fff;
-    color: #0a809a;
-}*/
 
 /* Footer */
 .contact {
@@ -623,11 +514,12 @@ address {
     }
 
     .logo2 img {
-        /*position: absolute;
+        position: absolute;
         top: 50px;
-        right: 300px;
-        width: 220px;*/
-        display: none;
+        right: 210px;
+        width: 200px;
+        opacity: 0.8;
+        /*display: none;*/
     }
 
     .navbar-container input[type="checkbox"]:checked~.menu-items {
@@ -672,11 +564,57 @@ address {
     .contact_col{
         padding-bottom: 15px;
     }
+    .col-1 h3 {
+        text-align: center;
+    }
+    .col-1 {
+        flex-basis: 50%;
+        position: relative;
+        padding: 30px;
+        padding-top: 0;
+        margin-top: 20px;
+    }
+    
+    .col-1 h3 {
+        padding-top: 10px;
+        text-align: left;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    
+    .col-1 .slist {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    
+    .col-1 img {
+        padding: 0px;
+        width: 100%;
+    }
+    .services_home {
+        margin: 0;
+        padding-left: 0px;
+    }
+    .contact {
+      
+        padding: 10px;
+        padding-left: 0px;
+        
+    }
+    .allrt {
+        display: flex;
+        text-align: center;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        color: #a9a7a7;
+    
+    }
 }
 
 
 
-/*--------Services----------*/
+/*--------Services page----------*/
 .services {
     width: 80%;
     text-align: center;
@@ -703,10 +641,18 @@ address {
     height: 100%;
 }
 
+.desc_service{
+    position: relative;
+    padding-top: 20px; /* Adjust as needed for spacing */
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
+
 .layer {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: 110%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -718,15 +664,16 @@ address {
 }
 
 .layer h3 {
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 23px;
+    font-weight: 500;
+    width: 80%;
     color: #fff;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s;
 }
 
@@ -820,9 +767,8 @@ h1 {
     margin-right: 80px;
 }
 
-.col2_about ul li {
+.col2_about ul {
     padding-left: 150px;
-    list-style-type: none;
 }
 
 .col1_about img {
@@ -864,6 +810,7 @@ h1 {
 
 .vision h3 {
     font-size: 30px;
+    text-align: center;
 }
 
 .vision h3::before {
@@ -886,8 +833,9 @@ h1 {
     flex-basis: 50%;
     position: relative;
     padding: 80px;
+    padding-top: 10px;
     padding-bottom: 0;
-    margin-top: 20px;
+    margin-top: 0px;
     height: auto;
 }
 
@@ -914,7 +862,7 @@ h1 {
 }
 
 .who .col_about {
-    flex: 64%;
+    flex: 50%;
 }
 
 .who .row_about {
@@ -924,10 +872,10 @@ h1 {
 .community img {
     width: 100%;
     transform: translateX(-25px);
-    padding-top: 0px;
+    padding-top: 120px;
 }
 .community .col_about {
-    flex: 64%;
+    flex: 50%;
 }
 
 .community .col_about {
@@ -962,45 +910,61 @@ h1 {
     }
 
     .col1_about img {
-        width: 75%;
-        margin-left: 40px;
+        width: 100%;
+        margin-left: 0px;
     }
 
     .col2_about .box {
         display: none;
     }
-
+    .col_about h3 {
+        text-align: center;
+    }
+  
     .box {
         height: 93%;
     }
 
     .vision {
+        padding-bottom: 10px;
         font-size: 20px;
     }
 
     .vision h3 {
+        text-align: center;
         font-size: 30px;
     }
 
     .col_about {
-        padding: 20px 80px;
+        padding: 10px 5px;
         padding-bottom: 0;
         margin-top: 5px;
         height: auto;
     }
+    .col_about p,h3{
+        text-align: center;
+        padding: 5px 20px;
+    }
 
     .who .col_about img {
-        width: 80%;
+        width: 100%;
         transform: translateX(0px);
+        padding: 0px;
     }
 
     .who .row_about {
         background-image: linear-gradient(rgb(255, 255, 255), rgb(227, 227, 227));
     }
 
-    /*.community img {
-        display: none; 
-    }*/
+    .community .row_about {
+        background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(227, 227, 227));
+    }
+
+    .community img {
+        transform: translateX(0px);
+        width: 100%;
+        padding: 0px;
+    }
     .community .row_about{
         flex-direction: column-reverse;
     }
