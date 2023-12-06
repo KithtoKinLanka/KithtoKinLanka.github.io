@@ -611,10 +611,26 @@ address {
 
 
 /*--------Services page----------*/
+
+
+.services_sp {
+    background: #0a809a;
+    color: #fff;
+    padding-left: 280px;
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .services_sp h2 {
+        font-size: 35px;
+        color: #fff;
+    }
+
 .services {
     width: 80%;
     text-align: left;
-    padding-top: 120px;
+    padding-top: 100px;
     font-size: 33px;
     margin: auto;
 }
