@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using kithtokin_web.DataAccessLayer;
 
@@ -11,9 +12,11 @@ using kithtokin_web.DataAccessLayer;
 namespace kithtokin_web.Migrations
 {
     [DbContext(typeof(KithtoKinDBContext))]
-    partial class KithtoKinDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231217190212_updateschema-addColumns-Service-Client")]
+    partial class updateschemaaddColumnsServiceClient
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +49,7 @@ namespace kithtokin_web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("OtherResidentType")
+                    b.Property<string>("OtherType")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -78,8 +81,8 @@ namespace kithtokin_web.Migrations
 
                     b.Property<string>("CallTime")
                         .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");

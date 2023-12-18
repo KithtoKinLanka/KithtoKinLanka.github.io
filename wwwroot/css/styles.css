@@ -77,7 +77,7 @@
         font-weight: 700;
     }
 
-.btn {
+.btn-con-request {
     background-color: transparent;
     border: solid#ffffff;
     border-radius: 50px;
@@ -88,7 +88,7 @@
     text-decoration: none;
 }
 
-    .btn:hover {
+    .btn-con-request:hover {
         background-color: #fff;
         color: #0a809a;
         transition: ease-in 0.5s;
@@ -100,7 +100,7 @@
     font-weight: 400;
 }
 
-    .navbar a:not(.btn)::after {
+    .navbar a:not(.btn-con-request)::after {
         content: '';
         display: block;
         background: #fff;

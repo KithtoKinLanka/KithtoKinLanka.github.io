@@ -25,6 +25,9 @@ namespace kithtokin_web.Models.DBEntities
         [Required]
         [StringLength(20)]
         public string ResidenceType { get; set; }
+
+        [StringLength(100)]
+        public string? OtherResidentType { get; set; }
         [StringLength(25)]
         public string YearsAbroad { get; set; }
 

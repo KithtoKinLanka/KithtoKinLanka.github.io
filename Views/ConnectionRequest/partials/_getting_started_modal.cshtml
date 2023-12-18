@@ -1,0 +1,39 @@
+﻿<div class="modal" id="disclaimerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Getting Started</h5>
+                @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+            </div>
+            <div class="modal-body">
+                <div class="slist">
+                    <ol>
+                        <li> You decide what you want to get done in Sri Lanka <br>(our <a asp-area="" asp-controller="Services" asp-action="Index">SERVICE</a> page will guide you) </li>
+                        <br>
+                        <li>You can connect with us by using the form on this page </li>
+                        <br>
+                        <li>We reach out to you through email or WhatsApp, as preferred by you, to discuss your requirements </li>
+                        <br>
+                        <li>
+                            Mutually agree on the assignment (a service or services), assignment period, terms and conditions, cost
+                            and payment plan
+                        </li>
+                        <br>
+                        <li> We undertake the assignment while providing you with periodical updates</li>
+                    </ol>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                    <label class="form-check-label" for="agreeCheckbox">I understand.</label>
+                </div>
+                <div class="alert alert-danger" role="alert" id="alertModalError" style="display:none">
+                    Please tick the 'I Understand' checkbox.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="confirmButton">Confirm</button>
+                <button type="button" class="btn btn-primary" id="modalBackBtn" onclick="history.back();">Back</button>
+            </div>
+        </div>
+    </div>
+</div>

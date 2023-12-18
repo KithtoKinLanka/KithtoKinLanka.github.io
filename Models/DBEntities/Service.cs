@@ -17,10 +17,12 @@ namespace kithtokin_web.Models.DBEntities
         [Required]
         [StringLength(50)]
         public string CommunicationMethods { get; set; }
-        [StringLength(20)]
+        [StringLength(256)]
         public string CallTime { get; set; }
 
         [ForeignKey("ClientId")]
         public Client Client { get; set; }
+        [StringLength(11)]
+        public string RequestID {  get; set; }
     }
 }

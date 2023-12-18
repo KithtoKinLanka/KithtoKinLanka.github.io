@@ -23,8 +23,16 @@ namespace kithtokin_web.Controllers
         [HttpPost]
         public IActionResult SaveFormData([FromBody] ClientInfoModel userInfo)
         {
-            _clientService.AddClientWithServiceData(userInfo);
-            return Json(new { success = true, message = "Data saved successfully" });
+            try
+            {
+                string confirmationId = _clientService.AddClientWithServiceData(userInfo);
+                return Json(new { success = true, confirmationId = confirmationId, message = "Data saved successfully" });
+            }
+            catch (Exception e)
+            {
+                return Json(new { success = false, confirmationId = "0", message = "Could not save data", stack = e.InnerException?.ToString() });
+            }
+            
         }
 
 

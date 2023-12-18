@@ -11,12 +11,13 @@ namespace kithtokin_web.Models
         public string CityOfResidence { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public ResidenceTypeEnum ResidenceType { get; set; }
+        public string? ResdentTypeOtherText { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public YearsAbroadEnum YearsAbroad { get; set; }
         public IList<LanguageEnum> Languages { get; set; }
         public IList<CommunicationMethodEnum> CommunicationMethods { get; set; }
 
-        public string CallTime { get; set; }
+        public IList<string> CallTime { get; set; }
         public IList<ServiceTypeEnum> ServiceTypes { get; set; }
 
     }
