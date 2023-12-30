@@ -1,14 +1,8 @@
 ﻿<fieldset>
     <div class="form-card">
-        <div>
+        <div id="successConfirmDiv" style="display:none">
             <h2 class="fs-title text-center">Success !</h2>
-            @* <br><br>
-            <div class="row justify-content-center">
-            <div class="col-3">
-            <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
-            </div>
-            </div>
-            <br><br> *@
+            <p>Here is your confirmation number: <b><span id="confirmationNumber" style="color:black;"></span></b>. Please save this for future reference. You will also get a confirmation to your email.</p>
             <div class="slist">
                 <h4>Next steps:</h4>
                 <ol>
@@ -23,11 +17,19 @@
                 </ol>
             </div>
             <div class="row justify-content-center">
-                @* <div class="col-7 text-center">
-                <h5>You Have Successfully Submitted</h5>
-                </div> *@
                 <div class="alert alert-success" role="alert">
                     You have successfully submitted a connection request!
+                </div>
+            </div>
+        </div>
+        <div id="failConfirmDiv" style="display:none">
+            <h2 class="fs-title text-center">Unable to send the request!</h2>
+            <div>
+               <p>We are unable to send your request right now. Please try again later. We apologies for the inconvinience.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="alert alert-danger" role="alert">
+                    Connection request not sent!
                 </div>
             </div>
         </div>

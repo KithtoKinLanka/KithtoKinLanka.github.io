@@ -11,7 +11,7 @@ namespace kithtokin_web.Models
         public string CityOfResidence { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public ResidenceTypeEnum ResidenceType { get; set; }
-        public string? ResdentTypeOtherText { get; set; }
+        public string? ResidentTypeOtherText { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public YearsAbroadEnum YearsAbroad { get; set; }
         public IList<LanguageEnum> Languages { get; set; }

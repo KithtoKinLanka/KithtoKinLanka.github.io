@@ -1,8 +1,8 @@
 ﻿<fieldset>
     <div class="form-card">
-        <p><b>NOTE: </b><i>In this window, please select all options that are applicable to you. </i></p>
-        <ul>
-            <li><label>What do you want to get done in Sri Lanka? Please select every category applicable <span style="color: rgba(253, 6, 56, 0.86);"> *</span> :</label>
+        <p><b>NOTE: </b><i>In this window, please select all the options that are applicable to you. </i></p>
+        <ol>
+            <li><label>What do you want to get done in Sri Lanka? <span style="color: rgba(253, 6, 56, 0.86);"> *</span> :</label>
                 <div style="margin-top:5px;">
                     <input class="form-check-input" type="checkbox" name="serviceTypeInput" id="serviceType1" value="Family_connection_and_care" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
                     <label class="form-check-label" for="serviceType1">Family connection and care</label><br>
@@ -12,7 +12,7 @@
                     <label class="form-check-label" for="serviceType3">Holiday arrangements</label><br>
                     <input class="form-check-input" type="checkbox" name="serviceTypeInput" id="serviceType4" value="Legal_documentation" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
                     <label class="form-check-label" for="serviceType4">Legal documentation</label><br>
-                    <input class="form-check-input" type="checkbox" name="serviceTypeInput" id="serviceType5" value="Tasks_at_government departments" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
+                    <input class="form-check-input" type="checkbox" name="serviceTypeInput" id="serviceType5" value="Tasks_at_government_departments" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
                     <label class="form-check-label" for="serviceType5">Tasks at government departments</label><br>
                     <input class="form-check-input" type="checkbox" name="serviceTypeInput" id="serviceType6" value="Social_work" style="width:auto;border-radius:5px;border:1px solid lightgrey;margin-bottom:0px;">
                     <label class="form-check-label" for="serviceType6">Social work</label><br>
@@ -53,35 +53,43 @@
                     </div>
                 </div>
             </li>
-            <li><label>Convenient time for calls (please select considering your local time)  <span style="color: rgba(253, 6, 56, 0.86);"> *</span>:</label>
-                <div style="margin-top:5px;">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekdays_day" value="weekdays_day" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="weekdays_day">weekdays daytime</label>
+            <div id="timePickFieldsDiv" style="display:none">
+                <li>
+                    <label>Convenient time for calls<span style="color: rgba(253, 6, 56, 0.86);"> *</span>:</label>
+                    <div style="margin-top:5px;">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekdays_day" value="weekdays_day" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="weekdays_day">weekdays daytime</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekdays_eve" value="weekdays_eve" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="weekdays_eve">weekdays evening/night</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekend_day" value="weekend_day" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="weekend_day">weekends daytime</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekends_eve" value="weekends_eve" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="weekends_eve">weekends evening/night</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="by_appointment" value="by_appointment" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="by_appointment">by an appointment</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="comTimeInput" id="anyDay_AnyTime" value="anyDay_AnyTime" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                            <label class="form-check-label" for="anyDay_AnyTime">any day & any time</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekdays_eve" value="weekdays_eve" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="weekdays_eve">weekdays evening/night</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekend_day" value="weekend_day" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="weekend_day">weekends daytime</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="weekends_eve" value="weekends_eve" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="weekends_eve">weekends evening/night</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="by_appointment" value="by_appointment" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="by_appointment">by an appointment</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comTimeInput" id="anyDay_AnyTime" value="anyDay_AnyTime" style="width:auto;border-radius:5px;border:1px solid lightgrey">
-                        <label class="form-check-label" for="anyDay_AnyTime">any day & any time</label>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                
+                </li>
+            </div>
+        </ol>
+
+        <div class="alert alert-danger" id="svcInfoValidationErrorMsg" style="display:none">
+            @* <strong>Error!</strong> *@ Please select at least one option for each required section.
+        </div>
     </div>
     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
     <input type="button" name="save_details" id="save_details" class="next action-button" value="Confirm" />

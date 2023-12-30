@@ -45,7 +45,7 @@ namespace kithtokin_web.BusinessLogicLayer
                     ContryOfResidence = clientInfoModel.ContryOfResidence,
                     CityOfResidence = clientInfoModel.CityOfResidence,
                     ResidenceType = clientInfoModel.ResidenceType.ToString(),
-                    OtherResidentType = clientInfoModel.ResdentTypeOtherText,
+                    OtherResidentType = clientInfoModel.ResidentTypeOtherText,
                     YearsAbroad = clientInfoModel.YearsAbroad.ToString(),
                     Services = services
 

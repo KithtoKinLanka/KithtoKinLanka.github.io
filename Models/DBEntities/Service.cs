@@ -12,7 +12,7 @@ namespace kithtokin_web.Models.DBEntities
         public string ServiceName {  get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(21)]
         public string Languages { get; set; }
         [Required]
         [StringLength(50)]

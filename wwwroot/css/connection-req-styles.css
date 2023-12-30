@@ -247,6 +247,15 @@ select.list-dt:focus {
     object-fit: cover;
 }
 
+.validation-error {
+    border-color: #e06f7e;
+}
+
+.validation-error-text {
+    color: #e06f7e;
+    display:none;
+}
+
 /*#disclaimer-popup {
     display: none;
     position: fixed;
