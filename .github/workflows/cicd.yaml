@@ -1,8 +1,9 @@
 name: .NET Core
 on:
   workflow_dispatch:
+    branches: [main, hasith-mysql]
   push:
-    branches: [ main ]
+    branches: [ main, hasith-mysql]
   pull_request:
     branches: [ main ]
 jobs:
