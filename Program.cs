@@ -13,8 +13,14 @@ namespace kithtokin_web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            //builder.Services.AddDbContext<KithtoKinDBContext>(options =>
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            string connectionStr = builder.Configuration.GetConnectionString("DefaultConnection");
+
             builder.Services.AddDbContext<KithtoKinDBContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseMySql(connectionStr,ServerVersion.AutoDetect(connectionStr)));
+
 
             builder.Services.AddScoped<IClientService, ClientService>();
 
