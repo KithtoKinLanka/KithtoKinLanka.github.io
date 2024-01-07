@@ -1,0 +1,23 @@
+name: .NET Core
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout GitHub actions
+      uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.25
+    - name: Install dependencies
+      run: dotnet restore "./kithtokin-web.csproj"
+    - name: Build code
+      run: dotnet build "./kithtokin-web.csproj" --configuration Release --no-restore
+    - name: Publish application
+      run: dotnet publish "./kithtokin-web.csproj" -c Release -o myApp 
