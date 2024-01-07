@@ -1,0 +1,86 @@
+﻿<fieldset id="profileFields">
+    <div class="form-card">
+        <h2 class="fs-title">Profile Information</h2>
+        <ol>
+            <li>
+            <label>Name <span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+            <input type="text" name="name" id="cname" required>
+            <span id="cnamevalidationError" class="validation-error-text"><i>Please enter your name.</i></span>
+            </li>
+            <li>
+            <label>Email address<span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+            <input type="email" name="email" id="cemail" required>
+            <span id="cemailvalidationError" class="validation-error-text"><i>Please enter a valid email.</i></span>
+            </li>
+            <li>
+            <label>WhatsApp number</label>
+            @* <input type="text" id="cwhatsapp"> *@
+            <p id="output">Please enter a valid number below</p>
+            <input id="phone" type="tel" style="padding-right:6px;padding-left:52px;margin-left:0;"><br><br>
+            </li>
+            <li>
+            <label>Country of Current Residence <span style="color: rgba(253, 6, 56, 0.86);"> *</span></label>
+            <!-- Country names and Country Name -->
+                @{
+                    Html.RenderPartial("partials/_countries_dropdown");
+                }<br>
+            <span id="resCountryvalidationError" class="validation-error-text"><i>Please select a country.</i></span>
+            </li>
+            <li>
+            <label>City of Current Residence</label>
+            <input type="text" id="crescity">
+            <span id="resCityvalidationError" class="validation-error-text"><i>Please enter a city.</i></span>
+            </li>
+            <li>
+            <label>
+                Residence Type (Permanent, Citizen, Dual Citizen etc.)<span style="color: rgba(253, 6, 56, 0.86);">
+                    *
+                </span>
+            </label>
+            <div style="margin-top:5px;">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="crestype" id="permanentRes" value="Permanent" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="permanentRes">Permanent Resident</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="crestype" id="citizen" value="Citizen" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="citizen">Citizen</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="crestype" id="dual_citizen" value="Dual_Citizen" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="dual_citizen">Dual Citizen</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="crestype" id="other_resident" value="Other" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="other_resident">Other</label>
+                </div>
+                <div class="form-check" id="otherRestypeDiv" style="display:none">
+                    <label class="form-check-label" for="other_resident">Please enter the Residence Type</label>
+                    <input type="text" name="otherResTypeInputText" id="otherResTypeInputText" maxlength="15">
+                    <span id="otherResTypeValidationError" class="validation-error-text"><i>This field cannot be empty.</i></span>
+                </div>
+            </div>
+            <span id="resTypeValidationError" class="validation-error-text"><i>Please select a Residence Type.</i></span>
+            </li>
+            <li>
+            <label>How many years have you been abroad?</label>
+            <div style="margin-top:5px;">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="durationOption" id="y0_5" value="Years_0_5" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="y0_5">0-5 Years</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="durationOption" id="y5_10" value="Years_5_10" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="y5_10">5-10 Years</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="durationOption" id="y10above" value="Years_More_Than_10" style="width:auto;border-radius:5px;border:1px solid lightgrey">
+                    <label class="form-check-label" for="y10above">More than 10 Years</label>
+                </div>
+            </div>
+            <span id="rearsAbroadValidationError" class="validation-error-text"><i>Please select one of the options.</i></span>
+            </li>
+        </ol>
+    </div>
+    <input type="button" name="next" id="on_profile_next" class="next action-button" value="Next" />
+</fieldset>

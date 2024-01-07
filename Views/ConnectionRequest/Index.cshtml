@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section Stylesheets {
+    <link rel="stylesheet" href="css/connection-req-styles.css?v=@DateTime.Now">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/intlTelInput.css?v=@DateTime.Now">
+
+}
+@section Scripts {
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="js/phn_number/intlTelInput.js"></script>
+    <script type="text/javascript" src="js/connection-request.js?v=@DateTime.Now"></script>
+}
+
+
+
+@{
+    Html.RenderPartial("partials/_getting_started_modal");
+}
+
+<!-- MultiStep Form -->
+@{
+    Html.RenderPartial("partials/_multistep_form");
+}
