@@ -1,9 +1,8 @@
-name: .NET Core
+name: Website - build and deploy
 on:
   workflow_dispatch:
-    branches: [main, hasith-mysql]
   push:
-    branches: [ main, hasith-mysql]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
